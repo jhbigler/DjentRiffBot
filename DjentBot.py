@@ -104,8 +104,8 @@ def post_to_twitter(auth,post):
     api = twitter.Api(**auth)
     return  api.PostUpdate(post)
 
+if(__name__ == "__main__"):
 
-def main():
     riff = "-".join([FUNCS[p]() for p in grab_patterns()])
     auth = {}
     with open(AUTH_FILE,"r") as f:
@@ -113,9 +113,3 @@ def main():
 
     status = post_to_twitter(auth, riff)
     print(html.unescape(status.text))
-
-
-if(__name__ == "__main__"):
-    main()
-    exit(0)
-
