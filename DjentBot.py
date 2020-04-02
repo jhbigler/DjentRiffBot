@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 import numpy as np
 #import facebook as fb
